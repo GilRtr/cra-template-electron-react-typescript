@@ -26,5 +26,6 @@
 	"main": "template.json",
 	"name": "cra-template-electron-react-typescript",
 	"private": false,
-	"version": "2.1.0"
+	"version": "2.1.1",
+    "repository": "github:GilRtr/cra-template-electron-react-typescript"
 }
