@@ -1,0 +1,30 @@
+{
+	"author": {
+		"name": "Gil Reiter - gil.reiter@boyar.org.il"
+	},
+	"bundleDependencies": false,
+	"deprecated": false,
+	"description": "A CRA template with an organized file higharchy for creating a buildable electron app with react, typescript, sass, and support for node modules",
+	"files": [
+		"template",
+		"template.json"
+	],
+	"keywords": [
+		"react",
+		"create-react-app",
+		"cra-template",
+		"template",
+		"typescript",
+		"eslint",
+		"sass",
+		"prettier",
+		"electron",
+		"electron-builder",
+		"desktop-app",
+		"node"
+	],
+	"main": "template.json",
+	"name": "cra-template-electron-react-typescript",
+	"private": false,
+	"version": "2.1.0"
+}

@@ -1,0 +1,44 @@
+{
+	"package": {
+		"name": "electron-node-react-sass-typescript",
+		"version": "0.1.0",
+		"dependencies": {
+			"@testing-library/jest-dom": "^4.2.4",
+			"@testing-library/react": "^9.5.0",
+			"@testing-library/user-event": "^7.2.1",
+			"@types/jest": "^24.9.1",
+			"@types/node": "^12.12.50",
+			"@types/react": "^16.9.43",
+			"@types/react-dom": "^16.9.8",
+			"react": "^16.13.1",
+			"react-dom": "^16.13.1",
+			"react-scripts": "3.4.1",
+			"typescript": "^3.7.5",
+			"electron-is-dev": "^1.2.0",
+			"electronmon": "^1.1.2",
+			"sass": "^1.26.10",
+			"concurrently": "^5.2.0",
+			"electron": "^9.1.0",
+			"electron-builder": "^22.7.0",
+			"wait-on": "^5.1.0"
+		},
+		"main": "public/electron-main.js",
+		"scripts": {
+			"start": "concurrently \"npm run react-serve\" \"wait-on http://localhost:3000 && npm run electron-start\"",
+			"build": "npm run react-build && npm run electron-build",
+			"release": "npm run react-build && npm run electron-release",
+
+			"electron-start": "electronmon .",
+			"electron-build": "electron-builder",
+			"electron-release": "electron-builder --publish=always",
+
+			"react-start": "react-scripts start",
+			"react-build": "react-scripts build",
+			"react-serve": "SET BROWSER=none&&npm run react-start"
+		},
+		"eslintConfig": {
+			"extends": "react-app"
+		},
+		"homepage": "./"
+	}
+}

@@ -1,0 +1,31 @@
+///	here you can add glogal variables,
+///	mixins, placeholders, and classes
+$sass-color: #c6538c
+$react-color: #61dafb
+$typescript-color: #152740
+$electron-color: #2b2e3b
+
+@mixin prefix($property, $value, $prefixes: webkit-user ms-user moz-user)
+	#{$property}: $value
+	@each $prefix in $prefixes
+		-#{$prefix}-#{$property}: $value
+
+%no-select
+	@include prefix(user-select, none)
+
+%dragable
+	@extend %no-select
+	@include prefix(region, drag, webkit-app)
+
+%non-dragable
+	@include prefix(region, no-drag, webkit-app)
+
+button, a
+	@extend %non-dragable
+
+body
+	margin: 0
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+
+code
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
